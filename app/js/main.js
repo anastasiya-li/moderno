@@ -11,6 +11,31 @@ $('.product-slider__inner').slick({
     dots: true,
     slidesToShow: 4,
     slidesToScroll: 4,
+    responsive: [
+        {
+            breakpoint: 1900,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true,
+            }
+        },
+        {
+            breakpoint: 1441,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 801,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            }
+        },
+    ]
 });
 
 $(".js-range-slider").ionRangeSlider({
@@ -45,6 +70,7 @@ $('.product-one__tabs .tab, .settings__tabs .tab').on('click', function(event) {
         return false;
     });
 
+$('input[type="file"], select').styler();
 
 $('.header__btn-menu').on('click', function(){
     $('.header__box').toggleClass('active');
